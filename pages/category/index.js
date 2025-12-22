@@ -96,14 +96,14 @@ export default function CategoryPage({ initialCategories, initialAuthors, initia
               placeholder="Search or select categories..."
             />
 
-            <label className="form-label fw-bold mt-3">Select Authors</label>
+            {/* <label className="form-label fw-bold mt-3">Select Authors</label>
             <Select
               isMulti
               options={authors.map((a) => ({ value: a._id, label: a.name }))}
               value={selectedAuthors}
               onChange={setSelectedAuthors}
               placeholder="Search or select authors..."
-            />
+            /> */}
 
             <button className="btn btn-sm btn-outline-primary mt-3 custom-primary-btn" onClick={handleApplyFilters}>
               {loadingBooks ? "Loading..." : "Apply Filters"}

@@ -7,9 +7,16 @@ import "../public/css/responsive.css";
 import Script from "next/script";
 import { useRouter } from "next/router";
 import Head from "next/head";
+// import "bootstrap/dist/css/bootstrap.min.css";
+
+// import { useEffect } from "react";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
+
+  // useEffect(() => {
+  //   import("bootstrap/dist/js/bootstrap.bundle.min.js");
+  // }, []);
 
   const canonicalUrl = `https://3xbooks.com${router.asPath === "/" ? "" : router.asPath}`;
   return (

@@ -1980,6 +1980,10 @@ min-height: 100%;
     .find-books-category-section .text-right.cutom-btn-dark{justify-content: center;}
 }
 @media (max-width:599px){
+  ul.breadcrumb-ui {
+    font-size: 20px;
+    text-align: justify;
+}
   section.people-tab-section.ptb-80 {
     padding: 50px 0px;
 }

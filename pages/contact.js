@@ -60,13 +60,22 @@ export default function Contact() {
       </Head>
 
       <Header />
-
       <section className="banner-inner-page people-bg">
         <div className="container">
-          <h1>Connect with Us Anytime</h1>
-          <p>Feel free to ask questions or suggestions — we value your inputs.</p>
+          <div className="banner-content custom-position-abs">
+            <div className="row align-items-center">
+              <div className="col-lg-6 mb-4 mb-lg-0">
+                <h1>Connect with Us Anytime</h1>
+                <p className="lead text-secondary mb-4">
+                  Feel free to ask questions or suggestions — we value your inputs.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
+      
 
       <section className="contact-section">
           <div className="container">

@@ -70,22 +70,6 @@ export default function AuthorDetail() {
   return (
     <>
       <Header />
-      
-      {/* <section className="banner-section">
-        <div className="banner-overlay"></div>
-        <div className="banner-content">
-          <div className="breadcrumb-custom mb-2 text-white">
-            <Breadcrumbs
-              items={[
-                { label: "Home", href: "/" },
-                { label: "Authors", href: "/authors" },
-                { label: author.name, active: true }
-              ]}
-            />
-          </div>
-          <h2 className="text-white">All Authors</h2>
-        </div>
-      </section> */}
 
       {/* Banner */}
       <section className="banner-inner-page author-detail-bg">
