@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import MarkdownWithToggle from "../../components/MarkdownWithToggle";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Breadcrumbs from "../../components/Breadcrumbs";
 
 export default function BookDetail() {
   const router = useRouter();
@@ -69,10 +70,71 @@ export default function BookDetail() {
   return (
     <>
       <Head>
-        <title>{`${book.title} by ${book.authors?.[0]?.name}`}</title>
+         <title>{`${book.title} by ${book.authors?.[0]?.name}`}</title>
+        <meta
+          name="description"
+          content={book.description?.slice(0, 160)}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://3xbooks.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Category",
+                  "item": "https://3xbooks.com/category"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": book.categories?.[0]?.name,
+                  "item": `https://3xbooks.com/category/${book.categories?.[0]?.name}`
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": book.title,
+                  "item": `https://3xbooks.com/books/${book.slug}`
+                }
+              ]
+            })
+          }}
+        />
       </Head>
 
       <Header />
+      
+
+      <section className="banner-section">
+        <div className="banner-overlay"></div>
+        <div className="banner-content">
+          <div className="breadcrumb-custom mb-2 text-white">
+            <h3 className="text-white">
+            <Breadcrumbs
+              items={[
+                { label: "Home", href: "/" },
+                { label: "Category", href: "/category" },
+                { label: book.categories?.[0]?.name, href: `/category/${book.categories?.[0]?.name}` },
+                { label: book.title, active: true }
+              ]}
+            />
+            </h3>
+            
+          </div>
+        </div>
+      </section>
+
+
 
       <section className="book-detail-page container py-5">
         <div className="row align-items-start">

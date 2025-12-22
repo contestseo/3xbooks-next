@@ -6,6 +6,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import InnerPreloader from "../../components/innerPreloader";
 
+
 export default function CategoryPage({ initialCategories, initialAuthors, initialBooks }) {
   const [categories] = useState(initialCategories);
   const [authors] = useState(initialAuthors);
@@ -133,7 +134,7 @@ export default function CategoryPage({ initialCategories, initialAuthors, initia
                 </div>
               </div>
 
-              <div className="filter-group">
+              {/* <div className="filter-group">
                 <div className="filter-title">Authors</div>
                 <div className="filter-content">
                   {authors.map((a) => (
@@ -153,7 +154,7 @@ export default function CategoryPage({ initialCategories, initialAuthors, initia
                     </label>
                   ))}
                 </div>
-              </div>
+              </div> */}
 
               <button className="btn btn-sm btn-outline-primary mt-3 custom-primary-btn" onClick={handleApplyFilters}>
                 Apply

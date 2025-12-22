@@ -7,6 +7,7 @@ import axios from "axios";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import MarkdownWithToggle from "../../components/MarkdownWithToggle";
+import Breadcrumbs from "../../components/Breadcrumbs";
 
 export default function AuthorDetail() {
   const API_BASE = process.env.NEXT_PUBLIC_API_URL;
@@ -69,6 +70,22 @@ export default function AuthorDetail() {
   return (
     <>
       <Header />
+      
+      {/* <section className="banner-section">
+        <div className="banner-overlay"></div>
+        <div className="banner-content">
+          <div className="breadcrumb-custom mb-2 text-white">
+            <Breadcrumbs
+              items={[
+                { label: "Home", href: "/" },
+                { label: "Authors", href: "/authors" },
+                { label: author.name, active: true }
+              ]}
+            />
+          </div>
+          <h2 className="text-white">All Authors</h2>
+        </div>
+      </section> */}
 
       {/* Banner */}
       <section className="banner-inner-page author-detail-bg">
@@ -77,6 +94,13 @@ export default function AuthorDetail() {
             <div className="row align-items-center">
               <div className="col-lg-6 mb-4 mb-lg-0">
                 <h1>{author.name}</h1>
+                <Breadcrumbs
+                  items={[
+                    { label: "Home", href: "/" },
+                    { label: "Authors", href: "/authors" },
+                    { label: author.name, active: true }
+                  ]}
+                />
               </div>
             </div>
           </div>

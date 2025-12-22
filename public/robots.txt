@@ -1,3 +1,8 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+
+Sitemap: https://3xbooks.com/sitemap.xml

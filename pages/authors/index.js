@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Breadcrumbs from "../../components/Breadcrumbs";
 
 export default function Authors({ authorsSSR }) {
   const [filter, setFilter] = useState("all");
@@ -60,14 +61,22 @@ export default function Authors({ authorsSSR }) {
 
       <Header />
 
+      
+
+
       {/* Banner */}
-      <section className="banner-section">
-        <div className="banner-overlay"></div>
-        <div className="banner-content">
-          <div className="breadcrumb-custom mb-2 text-white">
-            Home › All Authors
+      <section className="banner-inner-page people-bg">
+        <div className="container">
+          <div className="banner-content custom-position-abs">
+            <div className="row align-items-center">
+              <div className="col-lg-6 mb-4 mb-lg-0">
+                <h1>Know the Authors Behind Valuable Work</h1>
+                <p className="lead text-secondary mb-4">
+                  Gain insights about expert writers who showcase their expertise through impactful work. 
+                </p>
+              </div>
+            </div>
           </div>
-          <h2 className="text-white">All Authors</h2>
         </div>
       </section>
 

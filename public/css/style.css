@@ -55,6 +55,14 @@ a.navbar-brand img {
 }
 }
 
+
+nav.breadcrumb-wrap ul li {
+    display: inline-block;
+}
+nav.breadcrumb-wrap ul {
+    list-style: none;
+}
+
 /* Category Card Grid (Find Books By Category) */
 .category-card {
   transition: box-shadow 0.2s, transform 0.2s;
@@ -1468,7 +1476,7 @@ section.people-tab-section.ptb-80 .outer-box {
 
 .filter-content {
     padding: 15px 16px;
-    height: 250px;
+    /* height: 250px; */
     overflow-y: auto;
 }
 

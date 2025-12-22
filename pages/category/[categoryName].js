@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Breadcrumbs from "../../components/Breadcrumbs";
 
 export default function CategoryPage() {
   const router = useRouter();
@@ -126,13 +127,26 @@ export default function CategoryPage() {
 
       <Header />
 
+
       <section className="banner-section">
         <div className="banner-overlay"></div>
         <div className="banner-content">
-          <div className="breadcrumb-custom mb-2 text-white">
-            Home &nbsp; › &nbsp; Best List
-          </div>
-          <h2 className="text-white">{readableCategoryName}</h2>
+          {/* <div className="breadcrumb-custom mb-2 text-white">
+            <Breadcrumbs
+              items={[
+                  { label: "Home", href: "/" },
+                  { label: "Category", href: "/category" },
+                  { label: readableCategoryName, active: true }
+                 ]}
+            />                                                                                       
+          </div> */}
+          <h3 className="text-white"><Breadcrumbs
+              items={[
+                  { label: "Home", href: "/" },
+                  { label: "Category", href: "/category" },
+                  { label: readableCategoryName, active: true }
+                 ]}
+            /></h3>
         </div>
       </section>
 
