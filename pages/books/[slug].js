@@ -70,7 +70,7 @@ export default function BookDetail() {
   return (
     <>
       <Head>
-         <title>{`${book.title} by ${book.authors?.[0]?.name}`}</title>
+        <title>{`${book.title} by ${book.authors?.[0]?.name}`}</title>
         <meta
           name="description"
           content={book.description?.slice(0, 160)}
@@ -80,31 +80,58 @@ export default function BookDetail() {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              "itemListElement": [
+              "@graph": [
                 {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://3xbooks.com"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Category",
-                  "item": "https://3xbooks.com/category"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": book.categories?.[0]?.name,
-                  "item": `https://3xbooks.com/category/${book.categories?.[0]?.name}`
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 4,
+                  "@type": "Book",
                   "name": book.title,
-                  "item": `https://3xbooks.com/books/${book.slug}`
+                  "author": {
+                    "@type": "Person",
+                    "name": book.authors?.[0]?.name
+                  },
+                  "image": book.bookImage,
+                  "url": `https://3xbooks.com/books/${book.slug}`,
+                  "description": book.description?.slice(0, 160)
+                },
+                {
+                  "@type": "Product",
+                  "name": book.title,
+                  "image": book.bookImage,
+                  "offers": {
+                    "@type": "Offer",
+                    "price": book.price,
+                    "priceCurrency": "USD",
+                    "url": `https://3xbooks.com/books/${book.slug}`,
+                    "availability": "https://schema.org/InStock"
+                  }
+                },
+                {
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                    {
+                      "@type": "ListItem",
+                      "position": 1,
+                      "name": "Home",
+                      "item": "https://3xbooks.com"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 2,
+                      "name": "Category",
+                      "item": "https://3xbooks.com/category"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 3,
+                      "name": book.categories?.[0]?.name,
+                      "item": `https://3xbooks.com/category/${book.categories?.[0]?.name}`
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 4,
+                      "name": book.title,
+                      "item": `https://3xbooks.com/books/${book.slug}`
+                    }
+                  ]
                 }
               ]
             })
@@ -113,23 +140,23 @@ export default function BookDetail() {
       </Head>
 
       <Header />
-      
+
 
       <section className="banner-section">
         <div className="banner-overlay"></div>
         <div className="banner-content">
           <div className="breadcrumb-custom mb-2 text-white">
             <h3 className="text-white">
-            <Breadcrumbs
-              items={[
-                { label: "Home", href: "/" },
-                { label: "Category", href: "/category" },
-                { label: book.categories?.[0]?.name, href: `/category/${book.categories?.[0]?.name}` },
-                { label: book.title, active: true }
-              ]}
-            />
+              <Breadcrumbs
+                items={[
+                  { label: "Home", href: "/" },
+                  { label: "Category", href: "/category" },
+                  { label: book.categories?.[0]?.name, href: `/category/${book.categories?.[0]?.name}` },
+                  { label: book.title, active: true }
+                ]}
+              />
             </h3>
-            
+
           </div>
         </div>
       </section>
@@ -250,7 +277,7 @@ export async function getServerSideProps({ params }) {
       const data = await rel.json();
       relatedBooks = data.filter((b) => b._id !== book._id).slice(0, 6);
     }
-  } catch (e) {}
+  } catch (e) { }
 
   return { props: { book, relatedBooks } };
 }

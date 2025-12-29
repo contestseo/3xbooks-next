@@ -22,7 +22,6 @@ export default function Breadcrumbs({ items }) {
             {index < items.length - 1 && (
               <>
               <span className="separator"> › </span> 
-              <span> </span>
               </>
               
             )}
