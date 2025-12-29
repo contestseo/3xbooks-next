@@ -6,6 +6,7 @@ import Link from "next/link";
 import axios from "axios";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Head from "next/head";
 import MarkdownWithToggle from "../../components/MarkdownWithToggle";
 import Breadcrumbs from "../../components/Breadcrumbs";
 
@@ -69,6 +70,73 @@ export default function AuthorDetail() {
 
   return (
     <>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Person",
+                  "@id": `https://3xbooks.com/author/${author.slug || name}`,
+                  "name": author.name,
+                  "url": `https://3xbooks.com/author/${author.slug || name}`,
+                  "image": author.image || "https://3xbooks.com/images/authors/avatar.jpg",
+                  "description": author.bio
+                    ? author.bio.substring(0, 160)
+                    : `Books written by ${author.name}`,
+                  "sameAs": [
+                    author.wikipedia,
+                    author.website,
+                    author.twitter
+                  ].filter(Boolean),
+                  "worksFor": {
+                    "@type": "Organization",
+                    "name": "3X Books",
+                    "url": "https://3xbooks.com"
+                  }
+                },
+                {
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                    {
+                      "@type": "ListItem",
+                      "position": 1,
+                      "name": "Home",
+                      "item": "https://3xbooks.com/"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 2,
+                      "name": "Authors",
+                      "item": "https://3xbooks.com/authors"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 3,
+                      "name": author.name,
+                      "item": `https://3xbooks.com/author/${author.slug || name}`
+                    }
+                  ]
+                },
+                {
+                  "@type": "ItemList",
+                  "name": `Books by ${author.name}`,
+                  "itemListOrder": "Descending",
+                  "itemListElement": author.books.map((book, index) => ({
+                    "@type": "ListItem",
+                    "position": index + 1,
+                    "url": `https://3xbooks.com/books/${book.slug || book._id}`,
+                    "name": book.title
+                  }))
+                }
+              ]
+            }),
+          }}
+        />
+      </Head>
+
       <Header />
 
       {/* Banner */}

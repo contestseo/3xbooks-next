@@ -13,6 +13,7 @@ export default function Authors({ authorsSSR }) {
   const [featuredAuthors, setFeaturedAuthors] = useState([]);
 
   const limit = 12;
+  const authors = Array.isArray(authorsSSR) ? authorsSSR : [];
 
   const slugify = (name) =>
     encodeURIComponent(name?.toLowerCase().trim().replace(/\s+/g, "-"));
@@ -35,8 +36,8 @@ export default function Authors({ authorsSSR }) {
       filter === "all"
         ? allAuthors
         : allAuthors.filter((a) =>
-            a.name.toLowerCase().startsWith(filter.toLowerCase())
-          );
+          a.name.toLowerCase().startsWith(filter.toLowerCase())
+        );
 
     setFilteredAuthors(list);
     setDisplayAuthors(list.slice(0, limit));
@@ -57,11 +58,54 @@ export default function Authors({ authorsSSR }) {
           name="description"
           content="Explore authors with top-selling books, popular writers and emerging talent at 3XBooks."
         />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "CollectionPage",
+              "@id": "https://3xbooks.com/authors",
+              "name": "Authors",
+              "description":
+                "Browse authors and discover books written by leading writers across genres.",
+              "url": "https://3xbooks.com/authors",
+
+              "mainEntity": {
+                "@type": "ItemList",
+                "name": "Authors Directory",
+                "itemListOrder": "Ascending",
+                "numberOfItems": authors.length,
+
+                "itemListElement": authors.map((author, index) => ({
+                  "@type": "ListItem",
+                  "position": index + 1,
+                  "item": {
+                    "@type": "Person",
+                    "@id": `https://3xbooks.com/author/${slugify(author.name)}`,
+                    "url": `https://3xbooks.com/author/${slugify(author.name)}`,
+                    "name": author.name,
+                    "image":
+                      author.image || "https://3xbooks.com/images/authors/avatar.jpg",
+                    "description": `Author of ${author.bookCount} books.`,
+                    "worksFor": {
+                      "@type": "Organization",
+                      "name": "3X Books",
+                      "url": "https://3xbooks.com"
+                    }
+                  }
+                }))
+              }
+            }),
+          }}
+        />
+
       </Head>
+
 
       <Header />
 
-      
+
 
 
       {/* Banner */}
@@ -72,7 +116,7 @@ export default function Authors({ authorsSSR }) {
               <div className="col-lg-6 mb-4 mb-lg-0">
                 <h1>Know the Authors Behind Valuable Work</h1>
                 <p className="lead text-secondary mb-4">
-                  Gain insights about expert writers who showcase their expertise through impactful work. 
+                  Gain insights about expert writers who showcase their expertise through impactful work.
                 </p>
               </div>
             </div>
