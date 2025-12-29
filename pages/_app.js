@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }) {
   const canonicalUrl = `https://3xbooks.com${router.asPath === "/" ? "" : router.asPath}`;
   return (
     <>
-    <Head>
+      <Head>
         <link rel="canonical" href={canonicalUrl} />
       </Head>
       {/* jQuery CDN (required for Bootstrap custom scripts) */}
@@ -40,6 +40,38 @@ export default function App({ Component, pageProps }) {
       <Script
         src="../public/js/custom.js"
         strategy="afterInteractive"
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Organization",
+                "@id": "https://3xbooks.com/#organization",
+                "name": "3xBooks",
+                "url": "https://3xbooks.com/",
+                "logo": "https://3xbooks.com/images/logo/logo.png"
+              },
+              {
+                "@type": "WebSite",
+                "@id": "https://3xbooks.com/#website",
+                "url": "https://3xbooks.com/",
+                "name": "3xBooks",
+                "publisher": {
+                  "@id": "https://3xbooks.com/#organization"
+                },
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": `https://3xbooks.com/?s={search_term_string}`,
+                  "query-input": "required name=search_term_string"
+                }
+              }
+            ]
+          }),
+        }}
       />
 
       <Component {...pageProps} />
