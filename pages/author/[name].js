@@ -39,7 +39,7 @@ export default function AuthorDetail({ author, error }) {
 
   return (
     <>
-      {/* ✅ SEO WORKS – SAME FRONTEND */}
+  
       <Head>
         <title>{`${author.name} Books – Biography & Best Titles | 3xBooks`}</title>
         <meta

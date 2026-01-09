@@ -6,9 +6,6 @@ import Footer from "../../components/Footer";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import MarkdownWithToggle from "../../components/MarkdownWithToggle";
 
-const stripMarkdown = (text = "") =>
-  text.replace(/\*\*(.*?)\*\*/g, "$1");
-
 
 export default function BookDetail({ book, relatedBooks }) {
   if (!book) return null;
@@ -100,7 +97,7 @@ export default function BookDetail({ book, relatedBooks }) {
         </div>
       </section>
 
-      {/* Book Detail */}
+      
       <section className="book-detail-page container py-5">
         <div className="row align-items-start">
           <div className="col-md-4 text-center">
