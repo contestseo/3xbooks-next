@@ -77,7 +77,7 @@ export default function BookDetail({ book, relatedBooks }) {
 
       <Header />
 
-      {/* Banner */}
+\
       <section className="banner-section">
         <div className="banner-overlay"></div>
         <div className="banner-content">

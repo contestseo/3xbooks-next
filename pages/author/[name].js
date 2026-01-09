@@ -74,7 +74,7 @@ export default function AuthorDetail({ author, error }) {
         </div>
       </section>
 
-      {/* Author Info */}
+    
       <section className="author-detail ptb-80">
         <div className="container">
           <div className="author-detail-info">
