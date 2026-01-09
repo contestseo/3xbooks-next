@@ -12,6 +12,9 @@ export default function AuthorDetail({ author, error }) {
   const getLimitedText = (text, limit = 300) =>
     !text ? "" : text.length <= limit ? text : text.substring(0, limit) + "...";
 
+  const stripMarkdown = (text = "") =>
+  text.replace(/\*\*(.*?)\*\*/g, "$1");
+
   const truncateTitle = (title, maxLength = 30) =>
     title?.length > maxLength ? `${title.slice(0, maxLength)}...` : title;
 
@@ -90,7 +93,7 @@ export default function AuthorDetail({ author, error }) {
 
                 {author.bio && (
                   <p className="mt-3">
-                    {getLimitedText(author.bio, 300)}{" "}
+                    {getLimitedText(stripMarkdown(author.bio, 300))}{" "}
                     {author.bio.length > 300 && (
                       <span
                         style={{

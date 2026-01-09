@@ -6,6 +6,10 @@ import Footer from "../../components/Footer";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import MarkdownWithToggle from "../../components/MarkdownWithToggle";
 
+const stripMarkdown = (text = "") =>
+  text.replace(/\*\*(.*?)\*\*/g, "$1");
+
+
 export default function BookDetail({ book, relatedBooks }) {
   if (!book) return null;
 
@@ -14,6 +18,9 @@ export default function BookDetail({ book, relatedBooks }) {
 
   const slugify = (name) =>
     name?.toLowerCase().trim().replace(/\s+/g, "-").replace(/[^\w\-.&]/g, "");
+
+  const stripMarkdown = (text = "") =>
+  text.replace(/\*\*(.*?)\*\*/g, "$1");
 
   const getLimitedText = (text, limit = 300) =>
     !text ? "" : text.length <= limit ? text : text.substring(0, limit) + "...";
@@ -116,7 +123,7 @@ export default function BookDetail({ book, relatedBooks }) {
 
             {book.description && (
               <p>
-                {getLimitedText(book.description)}
+                {getLimitedText(stripMarkdown(book.description))}
                 {book.description.length > 300 && (
                   <span
                     style={{ color: "#fb944c", cursor: "pointer", fontWeight: 500 }}

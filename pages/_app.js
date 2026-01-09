@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
-
+// import { useEffect } from "react";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
