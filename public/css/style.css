@@ -2042,3 +2042,67 @@ form.newsletter-input button {
 
   .contact-forms{padding: 40px 20px;}
 }
+
+/********Blog css Starts*********/
+.blog-content-wrap {
+    padding: 70px 0px;
+}
+.blog-wrap img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.blog-wrap {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+.blog-wrap h3 {
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 10px 0px;
+}
+span.blog-meta {
+    color: #fb944c;
+}
+.blog-content {
+    padding: 15px 10px;
+}
+.blog-sidebar {
+    
+    overflow-y: auto;
+    border: 1px solid #fb944c;
+    border-radius: 5px;
+}
+.blog-sidebar h3 {
+    color: #fff;
+    background: #fb944c;
+    padding: 12px 16px;
+    font-weight: 600;
+    font-size: 22px;
+    
+}
+.recent-posts {
+    list-style-type: none;
+   padding: 10px 15px;
+    margin-left: 0;
+}
+.recent-posts li {
+    margin: 7px 0px;
+}
+ul.recent-posts li a {
+    color: #000;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.blog-sidebar.sticky{position: sticky;
+    top: 87px;}
+   .blog-detail-wrap {
+    padding: 50px 0px;
+}
+.blog-detail-wrap .blog-meta {
+    margin-bottom: 15px;
+    display: block;
+}
+.blog-detail-wrap h2{font-size:30px;margin: 40px 0px 15px;}
+/********Blog css Ends*********/

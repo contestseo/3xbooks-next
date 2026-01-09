@@ -52,6 +52,11 @@ export default function Header() {
                 </Link>
               </li>
               <li className="nav-item">
+                <Link href="/blog" className={`nav-link ${isActive("/blog")}`} onClick={() => setOpen(false)}>
+                  Blog
+                </Link>
+              </li>
+              <li className="nav-item">
                 <Link href="/contact" className={`nav-link ${isActive("/contact")}`} onClick={() => setOpen(false)}>
                   Contact
                 </Link>

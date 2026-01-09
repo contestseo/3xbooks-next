@@ -71,13 +71,14 @@ export default function Footer() {
             <Link href="/about">About</Link>
             <Link href="/category">Best List</Link>
             <Link href="/authors">Authors</Link>
+            <Link href="/blog">Blog</Link>
             <Link href="/contact">Contact</Link>
 
           </div>
 
           <div className="col-sm-6 col-md-6 col-xl-2 mb-4">
             <h5>Top Category</h5>
-            {categories.slice(0, 5).map((cat) => (
+            {categories.slice(0, 6).map((cat) => (
               <Link key={cat._id} href={`/category/${slugify(cat.name)}`}>
                 {cat.name}
               </Link>
@@ -88,7 +89,7 @@ export default function Footer() {
             <h5>Top Authors</h5>
             {authors
               .sort((a, b) => (b.books?.length || 0) - (a.books?.length || 0))
-              .slice(0, 5)
+              .slice(0, 6)
               .map((author) => (
                 <Link key={author._id} href={`/author/${slugify(author.name)}`}>
                   {author.name}
