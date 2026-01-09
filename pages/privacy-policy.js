@@ -98,7 +98,7 @@ export default function PrivacyPolicy() {
     );
 }
 
-// Sub-component for clean organization
+
 function PolicySection({ title, children }) {
     return (
         <div className="mb-12">

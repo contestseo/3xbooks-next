@@ -4,7 +4,6 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Head from "next/head";
 
-// Metadata for SEO
 export const metadata = {
     title: 'Affiliate Disclosure | 3xbooks',
     description: 'Affiliate Disclosure for 3xbooks.com',

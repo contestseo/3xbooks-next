@@ -17,6 +17,7 @@ export default function AuthorDetail({ author, error }) {
 
   const handleLoadMore = () => setVisibleCount((prev) => prev + 6);
 
+  
   if (error) {
     return (
       <>

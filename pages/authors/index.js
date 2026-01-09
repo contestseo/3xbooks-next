@@ -22,7 +22,7 @@ export default function Authors({ authorsSSR }) {
       .slice(0, 3);
   }, [authors]);
 
-  /* ✅ FILTERED AUTHORS – SSR SAFE */
+ 
   const filteredAuthors = useMemo(() => {
     return filter === "all"
       ? authors

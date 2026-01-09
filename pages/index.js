@@ -209,7 +209,7 @@ export default function Home({
         </div>
       </div>
 
-      {/* Find Books By Category (Tabs + Carousel) */}
+      
       <section className="ptb-80 find-books-category-section bg-light">
         <div className="container">
           <div className="row d-flex justify-content-between align-items-center mb-4">

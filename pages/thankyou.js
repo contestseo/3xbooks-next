@@ -6,6 +6,7 @@ import Head from "next/head";
 export default function ThankYou() {
   return (
     <>
+    {/* seo */}
       <Head>
         <title>Thank You – Your Submission Was Successful | 3xBooks</title>
         <meta name="title" content="Thank You – Your Submission Was Successful | 3xBooks" />

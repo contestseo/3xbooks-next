@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import emailjs from "emailjs-com";
 
+
 export default function Footer() {
   const router = useRouter();
   const API_BASE = process.env.NEXT_PUBLIC_API_URL;
@@ -117,6 +118,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      {/* footer 2 */}
       <hr/>
       <div className="container">
         <div className="row mt-4">

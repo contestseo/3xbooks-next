@@ -38,7 +38,7 @@ export default function CategoryPage({
 
   return (
     <>
-      {/* ✅ SEO META – VISIBLE IN VIEW SOURCE */}
+      
       <Head>
         <title>
           {`${readableCategoryName} Books – Best {readableCategoryName} Reads | 3xBooks`}

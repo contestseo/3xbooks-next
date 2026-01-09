@@ -40,7 +40,7 @@ export default function About({ authorsSSR }) {
         </div>
       </section>
 
-      {/* About Us Section */}
+ 
       <section className="about-us-section text-center ptb-80">
         <div className="container">
           <h2 className="w-60 mb-4">

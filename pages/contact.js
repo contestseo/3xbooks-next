@@ -153,7 +153,7 @@ export default function Contact() {
                     ></textarea>
                   </div>
 
-                  {/* reCAPTCHA */}
+                 
                   <div className="col-12 text-center mt-4">
                     <div className="g-recaptcha" data-sitekey="6LcWWPsrAAAAANKPWe4CtbE6GObwiy4ew2wCjtMl"></div>
                   </div>

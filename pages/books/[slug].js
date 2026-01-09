@@ -20,7 +20,7 @@ export default function BookDetail({ book, relatedBooks }) {
 
   return (
     <>
-      {/* ✅ REAL SEO (VISIBLE IN VIEW SOURCE) */}
+   
       <Head>
         <title>
           {`${book.title} by ${book.authors?.[0]?.name} – Book Details & Reviews | 3xBooks`}

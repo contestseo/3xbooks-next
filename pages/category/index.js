@@ -195,7 +195,7 @@ export default function CategoryPage({ initialCategories, initialAuthors, initia
 
                             <p><strong>Price: </strong>{book.price}</p>
 
-                            {/* Buy Now */}
+                           
                             {book.affiliateLink ? (
                               <a
                                 href={book.affiliateLink}
