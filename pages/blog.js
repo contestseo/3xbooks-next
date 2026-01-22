@@ -33,6 +33,7 @@ export default function Blog() {
                     </div>
                 </div>
             </section>
+            
             <section className="blog-content-wrap">
                 <div className="container">
                     <div className="row">

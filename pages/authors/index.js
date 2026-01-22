@@ -81,10 +81,14 @@ export default function Authors({ authorsSSR }) {
       <section className="banner-inner-page people-bg">
         <div className="container">
           <div className="banner-content custom-position-abs">
-            <h1>Know the Authors Behind Valuable Work</h1>
-            <p className="lead text-secondary mb-4">
-              Gain insights about expert writers who showcase their expertise through impactful work.
-            </p>
+            <div className="row align-items-center">
+              <div className="col-lg-6 mb-4 mb-lg-0">
+                <h1>Know the Authors Behind Valuable Works</h1>
+                <p className="lead text-secondary mb-4">
+                  Gain insights about expert writers who showcase their expertise through impactful work.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

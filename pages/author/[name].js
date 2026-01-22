@@ -150,14 +150,14 @@ export default function AuthorDetail({ author, error }) {
                           <div className="btn-wrap11">
                             <p className="text-white">Price: {book.price}</p>
                             {book.affiliateLink ? (
-                              <a
+                              <Link
                                 href={book.affiliateLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-white btn btn-sm btn-outline-primary bordered-btn-light"
                               >
                                 Buy Now
-                              </a>
+                              </Link>
                             ) : (
                               <span className="text-muted">No Amazon Link</span>
                             )}

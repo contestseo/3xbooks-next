@@ -79,10 +79,14 @@ export default function CategoryPage({ initialCategories, initialAuthors, initia
       <section className="banner-inner-page people-bg">
         <div className="container">
           <div className="banner-content custom-position-abs">
-            <h1>Best Books Just for You</h1>
-            <p className="lead text-secondary mb-4">
-              Pick your favorite reads from our carefully selected collection.
-            </p>
+            <div className="row align-items-center">
+              <div className="col-lg-6 mb-4 mb-lg-0">
+                <h1>Best Books Just for You</h1>
+                <p className="lead text-secondary mb-4">
+                  Pick your favorite reads from our carefully selected collection.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }) {
   //   import("bootstrap/dist/js/bootstrap.bundle.min.js");
   // }, []);
 
-  const canonicalUrl = `https://3xbooks.com${router.asPath === "/" ? "" : router.asPath}`;
+  const canonicalUrl = `https://bookssstore.com${router.asPath === "/" ? "" : router.asPath}`;
   return (
     <>
       <Head>
@@ -31,16 +31,16 @@ export default function App({ Component, pageProps }) {
       />
 
       {/* Bootstrap JS from public */}
-      <Script
+      {/* <Script
         src="../public/js/bootstrap.bundle.min.js"
         strategy="afterInteractive"
-      />
+      /> */}
 
       {/* Custom script */}
-      <Script
+      {/* <Script
         src="../public/js/custom.js"
         strategy="afterInteractive"
-      />
+      /> */}
 
       <script
         type="application/ld+json"
@@ -50,22 +50,22 @@ export default function App({ Component, pageProps }) {
             "@graph": [
               {
                 "@type": "Organization",
-                "@id": "https://3xbooks.com/#organization",
+                "@id": "https://bookssstore.com/#organization",
                 "name": "3xBooks",
-                "url": "https://3xbooks.com/",
-                "logo": "https://3xbooks.com/images/logo/logo.png"
+                "url": "https://bookssstore.com/",
+                "logo": "https://bookssstore.com/images/logo/logo.png"
               },
               {
                 "@type": "WebSite",
-                "@id": "https://3xbooks.com/#website",
-                "url": "https://3xbooks.com/",
+                "@id": "https://bookssstore.com/#website",
+                "url": "https://bookssstore.com/",
                 "name": "3xBooks",
                 "publisher": {
-                  "@id": "https://3xbooks.com/#organization"
+                  "@id": "https://bookssstore.com/#organization"
                 },
                 "potentialAction": {
                   "@type": "SearchAction",
-                  "target": `https://3xbooks.com/?s={search_term_string}`,
+                  "target": `https://bookssstore.com/?s={search_term_string}`,
                   "query-input": "required name=search_term_string"
                 }
               }
