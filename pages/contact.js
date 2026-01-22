@@ -155,7 +155,7 @@ export default function Contact() {
 
                  
                   <div className="col-12 text-center mt-4">
-                    <div className="g-recaptcha" data-sitekey="6LcWWPsrAAAAANKPWe4CtbE6GObwiy4ew2wCjtMl"></div>
+                    <div className="g-recaptcha" data-sitekey="6LeE7FIsAAAAALW1YTXJV0ORKyR7DUx63pZBI6Gv"></div>
                   </div>
 
                   {error && <p className="text-danger text-center mt-3">{error}</p>}

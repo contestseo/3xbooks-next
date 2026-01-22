@@ -6,8 +6,8 @@ import Head from "next/head";
 
 // Metadata for SEO
 export const metadata = {
-    title: 'Privacy Policy | 3xbooks',
-    description: 'Privacy Policy for 3xbooks.com - Learn how we protect your data.',
+    title: 'Privacy Policy | books store',
+    description: 'Privacy Policy for bookssstore.com - Learn how we protect your data.',
 };
 
 export default function PrivacyPolicy() {
@@ -16,9 +16,9 @@ export default function PrivacyPolicy() {
     return (
         <>
             <Head>
-                <title>Privacy Policy – How 3xBooks Protects Your Data</title>
-                <meta name="title" content="Privacy Policy – How 3xBooks Protects Your Data" />
-                <meta name="description" content="Read the 3xBooks Privacy Policy to understand how we collect, use, store, and protect your personal information when you use our website." />
+                <title>Privacy Policy – How books store Protects Your Data</title>
+                <meta name="title" content="Privacy Policy – How books store Protects Your Data" />
+                <meta name="description" content="Read the books store Privacy Policy to understand how we collect, use, store, and protect your personal information when you use our website." />
             </Head>
             <Header />
             <section className="banner-inner-page people-bg">
@@ -31,9 +31,9 @@ export default function PrivacyPolicy() {
                                     Last Updated: {lastUpdated}
                                 </p>
                                 <p className="lead  mb-4">
-                                    Welcome to <strong>3xbooks.com</strong>. We value your privacy and are committed to protecting your personal data.
+                                    Welcome to <strong>bookssstore.com</strong>. We value your privacy and are committed to protecting your personal data.
                                     This policy outlines how we handle information when you visit our website
-                                    <a href="https://3xbooks.com" className="text-blue-600 hover:underline ml-1"> https://3xbooks.com</a>.
+                                    <Link href="/" className="text-blue-600 hover:underline ml-1"> https://bookssstore.com</Link>.
                                 </p>
                             </div>
                         </div>
@@ -73,10 +73,10 @@ export default function PrivacyPolicy() {
 
 
                         <h4 className="mb-0">5. Third Party Links</h4>
-                        <p className=" mb-4">Some pages on 3xBooks.com may contain links to third-party websites, products, or services (including affiliate partners). These third-party sites have their own privacy policies and practices, and we are not responsible for the content or practices of those sites.</p>
+                        <p className=" mb-4">Some pages on bookssstore.com may contain links to third-party websites, products, or services (including affiliate partners). These third-party sites have their own privacy policies and practices, and we are not responsible for the content or practices of those sites.</p>
 
                         <h4 className="mb-0">6. Affiliate Programs</h4>
-                        <p>3xBooks.com participates in affiliate programs (such as Amazon Associates and other book retailer programs). This means we may earn a small commission when you click on links to those services and make a purchase — at no extra cost to you.</p>
+                        <p>bookssstore.com participates in affiliate programs (such as Amazon Associates and other book retailer programs). This means we may earn a small commission when you click on links to those services and make a purchase — at no extra cost to you.</p>
 
                         <h4 className="mb-0">7. Your Consent</h4>
                         <p>By using our website, you consent to the terms of this Privacy Policy and agree to our data practices as described herein.</p>
@@ -86,7 +86,7 @@ export default function PrivacyPolicy() {
 
 
                         <h4 className="mb-0">9. Contact Us</h4>
-                        <p>If you have any questions or concerns about this Privacy Policy or your personal information, feel free to <a href="/contact">contact us</a> via the Contact page.</p>
+                        <p>If you have any questions or concerns about this Privacy Policy or your personal information, feel free to <Link href="/contact">contact us</Link> via the Contact page.</p>
                     </div>
                 </div>
             </section>
@@ -99,13 +99,3 @@ export default function PrivacyPolicy() {
 }
 
 
-function PolicySection({ title, children }) {
-    return (
-        <div className="mb-12">
-            <h4 className="text-2xl font-bold text-slate-900 mb-4">{title}</h4>
-            <div className="text-slate-600 leading-relaxed">
-                {children}
-            </div>
-        </div>
-    );
-}

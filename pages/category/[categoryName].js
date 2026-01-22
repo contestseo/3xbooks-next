@@ -41,15 +41,15 @@ export default function CategoryPage({
       
       <Head>
         <title>
-          {`${readableCategoryName} Books – Best {readableCategoryName} Reads | 3xBooks`}
+          {`${readableCategoryName} Books – Best {readableCategoryName} Reads | Bookssstore`}
         </title>
         <meta
           name="title"
-          content={`${readableCategoryName} Books – Best {readableCategoryName} Reads | 3xBooks`}
+          content={`${readableCategoryName} Books – Best {readableCategoryName} Reads | Bookssstore`}
         />
         <meta
           name="description"
-          content={`Explore the best ${readableCategoryName} books on 3xBooks. Discover top reads, popular authors, and must-read titles in the ${readableCategoryName} category.`}
+          content={`Explore the best ${readableCategoryName} books on Bookssstore. Discover top reads, popular authors, and must-read titles in the ${readableCategoryName} category.`}
         />
 
       </Head>

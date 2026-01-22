@@ -41,14 +41,14 @@ export default function AuthorDetail({ author, error }) {
     <>
   
       <Head>
-        <title>{`${author.name} Books – Biography & Best Titles | 3xBooks`}</title>
+        <title>{`${author.name} Books – Biography & Best Titles | Books Store`}</title>
         <meta
           name="title"
-          content={`${author.name} Books – Biography & Best Titles | 3xBooks`}
+          content={`${author.name} Books – Biography & Best Titles | Books Store`}
         />
         <meta
           name="description"
-          content={`Discover books by ${author.name} on 3xBooks. Explore popular titles, author biography, latest releases, and recommended reads.`}
+          content={`Discover books by ${author.name} on Books Store. Explore popular titles, author biography, latest releases, and recommended reads.`}
         />
       </Head>
 

@@ -27,16 +27,16 @@ export default function BookDetail({ book, relatedBooks }) {
    
       <Head>
         <title>
-          {`${book.title} by ${book.authors?.[0]?.name} – Book Details & Reviews | 3xBooks`}
+          {`${book.title} by ${book.authors?.[0]?.name} – Book Details & Reviews | Bookssstore`}
         </title>
 
         <meta
           name="title"
-          content={`${book.title} by ${book.authors?.[0]?.name} – Book Details & Reviews | 3xBooks`}
+          content={`${book.title} by ${book.authors?.[0]?.name} – Book Details & Reviews | Bookssstore`}
         />
         <meta
           name="description"
-          content={`Read about ${book.title} by ${book.authors?.[0]?.name}. Get book summary, reviews, author details, and where to buy this book on 3xBooks.`}
+          content={`Read about ${book.title} by ${book.authors?.[0]?.name}. Get book summary, reviews, author details, and where to buy this book on Bookssstore.`}
         />
 
         {/* Schema */}
@@ -54,7 +54,7 @@ export default function BookDetail({ book, relatedBooks }) {
                     "name": book.authors?.[0]?.name,
                   },
                   "image": book.bookImage,
-                  "url": `https://3xbooks.com/books/${book.slug}`,
+                  "url": `https://bookssstore.com/books/${book.slug}`,
                   "description": book.description?.slice(0, 160),
                 },
                 {
@@ -65,7 +65,7 @@ export default function BookDetail({ book, relatedBooks }) {
                     "@type": "Offer",
                     "price": book.price,
                     "priceCurrency": "USD",
-                    "url": `https://3xbooks.com/books/${book.slug}`,
+                    "url": `https://bookssstore.com/books/${book.slug}`,
                     "availability": "https://schema.org/InStock",
                   },
                 },

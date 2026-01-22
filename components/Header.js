@@ -15,7 +15,7 @@ export default function Header() {
         <nav className="navbar navbar-expand-lg navbar-light">
 
           <Link href="/" className="navbar-brand">
-            <img src="/images/logo/logo.png" alt="3xbooks" />
+            <img src="/images/logo/logo.png" alt="books store" />
           </Link>
 
           {/* SAME BUTTON – ONLY JS ADDED */}

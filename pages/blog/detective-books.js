@@ -47,7 +47,7 @@ export default function DetactiveBook() {
              <p>Sir Arthur Conan Doyle introduced the detective character of Sherlock Holmes for the first time through his novel, A Study in Scarlet. It is a blend of mystery, humor, and an unconventional way of solving complex criminal cases. </p>
 
              <h2>Conclusion</h2>
-             <p>We hope you enjoyed the list of the best detective books of all time. These books will take you to realms of mystery, crime, and suspense. The creative detective characters and their unique approaches to solving complex crimes leave every reader stunned. If you need more of such great detective-themed literary works, you can explore our <Link href="https://3xbooks.com/">book collection</Link> to select your favorite one for a quality reading time. </p>
+             <p>We hope you enjoyed the list of the best detective books of all time. These books will take you to realms of mystery, crime, and suspense. The creative detective characters and their unique approaches to solving complex crimes leave every reader stunned. If you need more of such great detective-themed literary works, you can explore our <Link href="/">book collection</Link> to select your favorite one for a quality reading time. </p>
               </div>
         </section>
         <Footer />

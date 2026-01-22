@@ -62,14 +62,14 @@ export default function CategoryPage({ initialCategories, initialAuthors, initia
   return (
     <>
       <Head>
-        <title>Best Books List – Top Book Recommendations | 3xBooks</title>
+        <title>Best Books List – Top Book Recommendations | Bookssstore</title>
         <meta
           name="title"
-          content="Best Books List – Top Book Recommendations | 3xBooks"
+          content="Best Books List – Top Book Recommendations | Bookssstore"
         />
         <meta
           name="description"
-          content="Browse our curated list of top books and must-read recommendations. Find the best fiction, non-fiction, thrillers, and more selected by 3xBooks experts."
+          content="Browse our curated list of top books and must-read recommendations. Find the best fiction, non-fiction, thrillers, and more selected by Bookssstore experts."
         />
       </Head>
 

@@ -41,16 +41,16 @@ export default function Authors({ authorsSSR }) {
     <>
       {/* ✅ SEO – VISIBLE IN VIEW SOURCE */}
       <Head>
-        <title>Featured Authors – Discover Book Authors on 3xBooks</title>
+        <title>Featured Authors – Discover Book Authors on Books Store</title>
         <meta
           name="title"
-          content="Featured Authors – Discover Book Authors on 3xBooks"
+          content="Featured Authors – Discover Book Authors on Books Store"
         />
         <meta
           name="description"
-          content="Meet the authors behind your favorite books. Discover new writers, popular authors, and their best works on the 3xBooks Authors page."
+          content="Meet the authors behind your favorite books. Discover new writers, popular authors, and their best works on the Books Store Authors page."
         />
-        <link rel="canonical" href="https://3xbooks.com/authors" />
+        <link rel="canonical" href="https://bookssstore.com/authors" />
 
         {/* Schema */}
         <script
@@ -60,13 +60,13 @@ export default function Authors({ authorsSSR }) {
               "@context": "https://schema.org",
               "@type": "CollectionPage",
               "name": "Authors",
-              "url": "https://3xbooks.com/authors",
+              "url": "https://bookssstore.com/authors",
               "mainEntity": {
                 "@type": "ItemList",
                 "itemListElement": authors.map((author, index) => ({
                   "@type": "ListItem",
                   "position": index + 1,
-                  "url": `https://3xbooks.com/author/${slugify(author.name)}`,
+                  "url": `https://bookssstore.com/author/${slugify(author.name)}`,
                   "name": author.name,
                 })),
               },

@@ -50,7 +50,7 @@ export default function AffiliateDisclosure() {
 
                         <h4 className="mb-0">3. Your Trust Matters</h4>
                         <p className="mb-0">We understand and respect the trust you place in us. Transparency is a core part of our relationship with readers, and we aim to be clear about how our site operates.</p>
-                        <p>If you have any questions about our affiliate relationships or this Affiliate Disclosure, please feel free to <a href="/contact">contact us</a> via the Contact page.</p>
+                        <p>If you have any questions about our affiliate relationships or this Affiliate Disclosure, please feel free to <Link href="/contact">contact us</Link> via the Contact page.</p>
 
 
                     </div>
