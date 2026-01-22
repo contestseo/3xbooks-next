@@ -5,4 +5,4 @@ Disallow: /api/
 Disallow: /admin/
 Disallow: /_next/
 
-Sitemap: https://3xbooks.com/sitemap.xml
+Sitemap: https://bookssstore.com/sitemap.xml
