@@ -125,7 +125,7 @@ export default function Footer() {
       <div className="container">
         <div className="row mt-4">
           <div className="col-sm-6 col-md-6 col-xl-6">
-            ©2026. All rights reserved by bookssstore.com
+            ©2026. All rights reserved by <Link href="/">bookssstore.com</Link>
           </div>
 
           <div className="col-sm-6 col-md-6 col-xl-6" style={{
