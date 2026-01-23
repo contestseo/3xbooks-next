@@ -820,6 +820,9 @@ width: auto;
   text-decoration: none;
   margin-bottom: 8px;
 }
+a.footerLink {
+    display: inline-block;
+}
 
 .footer a:hover, .footer a:active {
   text-decoration: none;
