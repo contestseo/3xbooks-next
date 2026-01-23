@@ -68,14 +68,14 @@ export default function Home({
     <>
       {/* ================= SEO ================= */}
       <Head>
-        <title>Bookssstore – Discover Great Reads & Connect With Bookstores Worldwide</title>
+        <title>BookssStore – Discover Great Reads & Connect With Bookstores Worldwide</title>
         <meta
           name="title"
-          content="Bookssstore – Discover Great Reads & Connect With Bookstores Worldwide"
+          content="BookssStore – Discover Great Reads & Connect With Bookstores Worldwide"
         />
         <meta
           name="description"
-          content="Explore the best books across genres and connect with local and global bookstores. Find your next great read, latest releases, and curated collections at Bookssstore."
+          content="Explore the best books across genres and connect with local and global bookstores. Find your next great read, latest releases, and curated collections at BookssStore."
         />
       </Head>
 
@@ -146,7 +146,7 @@ export default function Home({
               Digital Platform Connecting Readers and Bookstores Worldwide
             </h2>
             <p className="text-secondary">
-              Bookssstore is a one-stop shop for connecting bookstores and readers. To help you find your favorite books for some quality reading time, we have a large selection of books in a variety of genres. Local bookshops have a fantastic opportunity to interact with ardent readers through our platform. You can browse any book of your choice according to your interest and preference.
+              BookssStore is a one-stop shop for connecting bookstores and readers. To help you find your favorite books for some quality reading time, we have a large selection of books in a variety of genres. Local bookshops have a fantastic opportunity to interact with ardent readers through our platform. You can browse any book of your choice according to your interest and preference.
             </p>
             <p className="text-secondary">
               Whether you prefer fiction or non-fiction, we present you with reads covering genres including mystery, suspense, thriller, drama, comedy, etc. Through our program, we help neighborhood bookshops reach their devoted customer base by utilizing their vast selection of excellent books. As a result, we assist independent bookstores in growing their global presence in addition to helping readers have an unforgettable reading experience.

@@ -8,9 +8,9 @@ export default function ThankYou() {
     <>
     {/* seo */}
       <Head>
-        <title>Thank You – Your Submission Was Successful | Bookssstore</title>
-        <meta name="title" content="Thank You – Your Submission Was Successful | Bookssstore" />
-        <meta name="description" content="Thank you for connecting with Bookssstore. Your submission has been received successfully. Explore books, authors, and recommendations on our site." />
+        <title>Thank You – Your Submission Was Successful | BookssStore</title>
+        <meta name="title" content="Thank You – Your Submission Was Successful | BookssStore" />
+        <meta name="description" content="Thank you for connecting with BookssStore. Your submission has been received successfully. Explore books, authors, and recommendations on our site." />
       </Head>
       <Header />
 

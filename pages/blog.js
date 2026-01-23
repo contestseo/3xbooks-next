@@ -13,9 +13,9 @@ export default function Blog() {
     return (
         <>
             <Head>
-                <title>Bookssstore Blog – Discover Books, Authors & Reading Tips</title>
-                <meta name="title" content="Bookssstore Blog – Discover Books, Authors & Reading Tips" />
-                <meta name="description" content="Read expert book blogs, reading guides, author insights, and honest reviews. Stay updated with the latest trends in books on Bookssstore." />
+                <title>BookssStore Blog – Discover Books, Authors & Reading Tips</title>
+                <meta name="title" content="BookssStore Blog – Discover Books, Authors & Reading Tips" />
+                <meta name="description" content="Read expert book blogs, reading guides, author insights, and honest reviews. Stay updated with the latest trends in books on BookssStore." />
             </Head>
             <Header />
 

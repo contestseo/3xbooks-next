@@ -18,9 +18,9 @@ export default function About({ authorsSSR }) {
   return (
     <>
       <Head>
-        <title>About Bookssstore – Your Book Discovery & Reader Community Platform</title>
-        <meta name="title" content="About Bookssstore – Your Book Discovery & Reader Community Platform" />
-        <meta name="description" content="Learn how Bookssstore connects readers and bookstores with a vast selection of books from top authors and genres. Read our mission and how we help book lovers everywhere." />
+        <title>About BookssStore – Your Book Discovery & Reader Community Platform</title>
+        <meta name="title" content="About BookssStore – Your Book Discovery & Reader Community Platform" />
+        <meta name="description" content="Learn how BookssStore connects readers and bookstores with a vast selection of books from top authors and genres. Read our mission and how we help book lovers everywhere." />
       </Head>
 
       <Header />
@@ -30,7 +30,7 @@ export default function About({ authorsSSR }) {
           <div className="banner-content custom-position-abs">
             <div className="row align-items-center">
               <div className="col-lg-6 mb-4 mb-lg-0">
-                <h1>Access Quality Read Easily with Bookssstore</h1>
+                <h1>Access Quality Read Easily with BookssStore</h1>
                 <p className="lead text-secondary mb-4">
                   Browse the list of best-selling books from renowned authors and stimulate your mind with new, creative ideas.
                 </p>
@@ -47,7 +47,7 @@ export default function About({ authorsSSR }) {
             Online Bookstore Keeping Your Love for Reading Alive
           </h2>
           <p className="text-secondary w-60 mb-4">
-            At Bookssstore, we offer you a wide selection of bestsellers to ignite your curiosity and give you a creative boost. We aim to introduce you to the best-selling online stores offering books from a wide selection of genres to take you into a new world. We attempt to connect the best online bookstores with curious readers in the digital age. Thus, we help readers experience quality storytelling and support small bookstores in the best way possible.
+            At BookssStore, we offer you a wide selection of bestsellers to ignite your curiosity and give you a creative boost. We aim to introduce you to the best-selling online stores offering books from a wide selection of genres to take you into a new world. We attempt to connect the best online bookstores with curious readers in the digital age. Thus, we help readers experience quality storytelling and support small bookstores in the best way possible.
           </p>
 
           <div className="row">
@@ -61,7 +61,7 @@ export default function About({ authorsSSR }) {
                 <div className="inner-img-box">
                   <h3>Our Mission</h3>
                   <h6>
-                    Bookssstore works to empower local bookstores by connecting them with their target audience.
+                    BookssStore works to empower local bookstores by connecting them with their target audience.
                   </h6>
                 </div>
               </div>

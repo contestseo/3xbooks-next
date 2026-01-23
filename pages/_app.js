@@ -51,7 +51,7 @@ export default function App({ Component, pageProps }) {
               {
                 "@type": "Organization",
                 "@id": "https://bookssstore.com/#organization",
-                "name": "Bookssstore",
+                "name": "BookssStore",
                 "url": "https://bookssstore.com/",
                 "logo": "https://bookssstore.com/images/logo/logo.png"
               },
@@ -59,7 +59,7 @@ export default function App({ Component, pageProps }) {
                 "@type": "WebSite",
                 "@id": "https://bookssstore.com/#website",
                 "url": "https://bookssstore.com/",
-                "name": "Bookssstore",
+                "name": "BookssStore",
                 "publisher": {
                   "@id": "https://bookssstore.com/#organization"
                 },

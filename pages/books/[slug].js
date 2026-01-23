@@ -27,16 +27,16 @@ export default function BookDetail({ book, relatedBooks }) {
    
       <Head>
         <title>
-          {`${book.title} by ${book.authors?.[0]?.name} – Book Details & Reviews | Bookssstore`}
+          {`${book.title} by ${book.authors?.[0]?.name} – Book Details & Reviews | BookssStore`}
         </title>
 
         <meta
           name="title"
-          content={`${book.title} by ${book.authors?.[0]?.name} – Book Details & Reviews | Bookssstore`}
+          content={`${book.title} by ${book.authors?.[0]?.name} – Book Details & Reviews | BookssStore`}
         />
         <meta
           name="description"
-          content={`Read about ${book.title} by ${book.authors?.[0]?.name}. Get book summary, reviews, author details, and where to buy this book on Bookssstore.`}
+          content={`Read about ${book.title} by ${book.authors?.[0]?.name}. Get book summary, reviews, author details, and where to buy this book on BookssStore.`}
         />
 
         {/* Schema */}

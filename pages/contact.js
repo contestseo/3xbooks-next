@@ -56,9 +56,9 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Contact Bookssstore – Get in Touch With Our Team</title>
-        <meta name="title" content="Contact Bookssstore – Get in Touch With Our Team" />
-        <meta name="description" content="Have a question or suggestion? Contact the Bookssstore team for support, partnerships, or feedback. We’re here to help book lovers around the world." />
+        <title>Contact BookssStore – Get in Touch With Our Team</title>
+        <meta name="title" content="Contact BookssStore – Get in Touch With Our Team" />
+        <meta name="description" content="Have a question or suggestion? Contact the BookssStore team for support, partnerships, or feedback. We’re here to help book lovers around the world." />
       </Head>
 
       <Header />

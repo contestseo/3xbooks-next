@@ -6,7 +6,7 @@ import Head from "next/head";
 
 // Metadata for SEO
 export const metadata = {
-    title: 'Privacy Policy | books store',
+    title: 'Privacy Policy | BookssStore',
     description: 'Privacy Policy for bookssstore.com - Learn how we protect your data.',
 };
 

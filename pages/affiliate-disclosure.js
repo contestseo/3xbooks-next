@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import Head from "next/head";
 
 export const metadata = {
-    title: 'Affiliate Disclosure | Bookssstore',
+    title: 'Affiliate Disclosure | BookssStore',
     description: 'Affiliate Disclosure for Bookssstore.com',
 };
 
@@ -14,8 +14,8 @@ export default function AffiliateDisclosure() {
     return (
         <>
             <Head>
-                <title>Affiliate Disclosure – Transparency & Earnings | Bookssstore</title>
-                <meta name="title" content="Affiliate Disclosure – Transparency & Earnings | Bookssstore" />
+                <title>Affiliate Disclosure – Transparency & Earnings | BookssStore</title>
+                <meta name="title" content="Affiliate Disclosure – Transparency & Earnings | BookssStore" />
                 <meta name="description" content="Learn about Bookssstore’ affiliate relationships, how we earn commissions, and our commitment to honest and transparent recommendations." />
             </Head>
             <Header />
