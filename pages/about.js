@@ -30,7 +30,7 @@ export default function About({ authorsSSR }) {
           <div className="banner-content custom-position-abs">
             <div className="row align-items-center">
               <div className="col-lg-6 mb-4 mb-lg-0">
-                <h1>Access Quality Read Easily with BookssStore</h1>
+                <h1>Great Reads for Deep Thinkers</h1>
                 <p className="lead text-secondary mb-4">
                   Browse the list of best-selling books from renowned authors and stimulate your mind with new, creative ideas.
                 </p>
