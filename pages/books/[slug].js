@@ -39,40 +39,74 @@ export default function BookDetail({ book, relatedBooks }) {
           content={`Read about ${book.title} by ${book.authors?.[0]?.name}. Get book summary, reviews, author details, and where to buy this book on BookssStore.`}
         />
 
-        {/* Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "Book",
-                  "name": book.title,
-                  "author": {
-                    "@type": "Person",
-                    "name": book.authors?.[0]?.name,
+         {/* ✅ BOOK + BREADCRUMB SCHEMA */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@graph": [
+                  {
+                    "@type": "Book",
+                    "@id": `https://bookssstore.com/books/${book.slug}`,
+                    "name": book.title,
+                    "description": book.description?.slice(0, 160),
+                    "image": book.bookImage,
+                    "inLanguage": "en",
+                    "author": {
+                      "@type": "Person",
+                      "@id": `https://bookssstore.com/author/${slugify(
+                        book.authors?.[0]?.name
+                      )}`,
+                      "name": book.authors?.[0]?.name,
+                      "url": `https://bookssstore.com/author/${slugify(
+                        book.authors?.[0]?.name
+                      )}`
+                    },
+                    "publisher": {
+                      "@type": "Organization",
+                      "name": "Amazon"
+                    },
+                    "mainEntityOfPage": {
+                      "@type": "WebPage",
+                      "@id": `https://bookssstore.com/books/${book.slug}`
+                    }
                   },
-                  "image": book.bookImage,
-                  "url": `https://bookssstore.com/books/${book.slug}`,
-                  "description": book.description?.slice(0, 160),
-                },
-                {
-                  "@type": "Product",
-                  "name": book.title,
-                  "image": book.bookImage,
-                  "offers": {
-                    "@type": "Offer",
-                    "price": book.price,
-                    "priceCurrency": "USD",
-                    "url": `https://bookssstore.com/books/${book.slug}`,
-                    "availability": "https://schema.org/InStock",
-                  },
-                },
-              ],
-            }),
-          }}
-        />
+                  {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                      {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://bookssstore.com/"
+                      },
+                      {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Category",
+                        "item": "https://bookssstore.com/category"
+                      },
+                      {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": book.categories?.[0]?.name,
+                        "item": `https://bookssstore.com/category/${slugify(
+                          book.categories?.[0]?.name
+                        )}`
+                      },
+                      {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": book.title,
+                        "item": `https://bookssstore.com/books/${book.slug}`
+                      }
+                    ]
+                  }
+                ]
+              })
+            }}
+          />
       </Head>
 
       <Header />

@@ -31,11 +31,23 @@ export default function AuthorDetail({ author, error }) {
     );
   }
 
-  if (!author) return null;
+  // if (!author) return null;
+
+  if (error) {
+    return <>Error</>;
+  }
+
 
   const displayedBooks = author.books
     ? author.books.slice(0, visibleCount)
     : [];
+
+    const cleanBio = author.bio
+    ? author.bio.replace(/\*\*(.*?)\*\*/g, "$1")
+    : "";
+
+      const slugify = (name) =>
+       name.toLowerCase().trim().replace(/\s+/g, "-").replace(/[^\w\-.&]/g, "");
 
   return (
     <>
@@ -50,6 +62,66 @@ export default function AuthorDetail({ author, error }) {
           name="description"
           content={`Discover books by ${author.name} on Books Store. Explore popular titles, author biography, latest releases, and recommended reads.`}
         />
+
+         {/* AUTHOR SCHEMA */}
+          {author && (
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "Person",
+                  "@id": `https://bookssstore.com/author/${slugify(author.name)}#author`,
+                  "name": author.name,
+                  "description": author.bio?.replace(/\*\*(.*?)\*\*/g, "$1") || "",
+                  "url": `https://bookssstore.com/author/${slugify(author.name)}`,
+                  "image":
+                    author.image ||
+                    "https://bookssstore.com/images/authors/avatar.jpg",
+                  "jobTitle": "Author",
+                  "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": `https://bookssstore.com/author/${slugify(author.name)}`,
+                  },
+                }),
+              }}
+            />
+          )}
+
+          {/* BREADCRUMB SCHEMA */}
+          {author && (
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                    {
+                      "@type": "ListItem",
+                      "position": 1,
+                      "name": "Home",
+                      "item": "https://bookssstore.com/",
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 2,
+                      "name": "Authors",
+                      "item": "https://bookssstore.com/authors",
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 3,
+                      "name": author.name,
+                      "item": `https://bookssstore.com/author/${slugify(author.name)}`,
+                    },
+                  ],
+                }),
+              }}
+            />
+          )}
+
+
       </Head>
 
       <Header />

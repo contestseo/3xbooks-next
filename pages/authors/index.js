@@ -37,6 +37,28 @@ export default function Authors({ authorsSSR }) {
   const handleLoadMore = () =>
     setDisplayCount((prev) => prev + limit);
 
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Authors List",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://bookssstore.com/authors"
+    },
+    "numberOfItems": authors.length,
+    "itemListElement": authors.map((author, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Person",
+        "@id": `https://bookssstore.com/author/${slugify(author.name)}`,
+        "name": author.name,
+        "url": `https://bookssstore.com/author/${slugify(author.name)}`,
+        "image": author.image || "https://bookssstore.com/images/authors/avatar.jpg"
+      }
+    }))
+  };
+
   return (
     <>
       {/* ✅ SEO – VISIBLE IN VIEW SOURCE */}
@@ -55,23 +77,7 @@ export default function Authors({ authorsSSR }) {
         {/* Schema */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "CollectionPage",
-              "name": "Authors",
-              "url": "https://bookssstore.com/authors",
-              "mainEntity": {
-                "@type": "ItemList",
-                "itemListElement": authors.map((author, index) => ({
-                  "@type": "ListItem",
-                  "position": index + 1,
-                  "url": `https://bookssstore.com/author/${slugify(author.name)}`,
-                  "name": author.name,
-                })),
-              },
-            }),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       </Head>
 

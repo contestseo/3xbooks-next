@@ -52,6 +52,41 @@ export default function CategoryPage({
           content={`Explore the best ${readableCategoryName} books on BookssStore. Discover top reads, popular authors, and must-read titles in the ${readableCategoryName} category.`}
         />
 
+        {/* BREADCRUMB SCHEMA */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@graph": [
+                  {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                      {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://bookssstore.com/"
+                      },
+                      {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Category",
+                        "item": "https://bookssstore.com/category"
+                      },
+                      {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": readableCategoryName,
+                        "item": `https://bookssstore.com/category/${slug}`
+                      }
+                    ]
+                  }
+                ]
+              })
+            }}
+          />
+
       </Head>
 
       <Header />
