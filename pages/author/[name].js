@@ -106,8 +106,8 @@ export default function AuthorDetail({ author, error }) {
                     {
                       "@type": "ListItem",
                       "position": 2,
-                      "name": "Authors",
-                      "item": "https://bookssstore.com/authors",
+                      "name": "Author",
+                      "item": "https://bookssstore.com/author",
                     },
                     {
                       "@type": "ListItem",
@@ -136,7 +136,7 @@ export default function AuthorDetail({ author, error }) {
                 <Breadcrumbs
                   items={[
                     { label: "Home", href: "/" },
-                    { label: "Authors", href: "/authors" },
+                    { label: "Author", href: "/author" },
                     { label: author.name, active: true },
                   ]}
                 />

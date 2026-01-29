@@ -70,7 +70,7 @@ export default function Footer() {
             <Link href="/">Home</Link>
             <Link href="/about">About</Link>
             <Link href="/category">Best List</Link>
-            <Link href="/authors">Authors</Link>
+            <Link href="/author">Authors</Link>
             <Link href="/blog">Blog</Link>
             <Link href="/contact">Contact</Link>
 
